@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>敬爱的侯教官、郭教官：</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const password = prompt("Password:");
+      const allowed = "hou&guo";
+      const container = document.querySelector('.container');
+      if (password === allowed) {
+        container.style.display = 'block';
+      } else {
+        document.body.innerHTML = "<h2 style='color: #c00; text-align: center; margin-top: 100px;'>密码错误，访问被拒绝。</h2>";
+      }
+    });
+  </script>
+
+  <style>
+    body {
+      /* Changed font-family to prioritize 'Ma Shan Zheng' for a handwritten style */
+      font-family: "华文行楷", "微软雅黑", "宋体", "黑体", SimSun, SimHei, sans-serif;
+      background: linear-gradient(135deg, #F4F4F4 0%, #D9D6FF 100%); /* Light background from new palette */
+      color: #5a4b7a; /* Main text color */
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #fff; /* Container background */
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 1.5s ease-out;
+      position: relative;
+      border: 1px solid #8A46BC; /* Soft border from new palette */
+      display: none;
+    }
+
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      border: 1px dashed #B45BCC; /* Soft dashed inner border from new palette */
+      border-radius: 15px;
+      pointer-events: none;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    .header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #513962; /* Deeper header color */
+      animation: slideInLeft 1s ease-out;
+    }
+    .header p {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 1.9rem;
+      color: #8E61B6; /* Salutation color */
+      text-align: left;
+      animation: slideInRight 1s ease-out 0.3s;
+    }
+    .paragraph {
+      margin-bottom: 25px;
+      text-indent: 2em;
+      animation: floatUp 1s ease-out forwards;
+      opacity: 0;
+      font-size: 1.3rem;
+      color: #330033;
+    }
+    .signature {
+      text-align: right;
+      margin-top: 50px;
+      font-style: italic;
+      color: #8E23A5; /* Softer signature color */
+      animation: fadeIn 1.5s ease-out 2s;
+    }
+    .signature .name {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+    .signature .date {
+      font-size: 1rem;
+      margin-top: 5px;
+    }
+
+    /* Animations */
+    @keyframes slideInLeft {
+      from { transform: translateX(-80%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes slideInRight {
+      from { transform: translateX(80%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes floatUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      .music-control-button {
+        bottom: 10px;
+        right: 10px;
+        font-size: 0.8rem;
+        padding: 8px 12px;
+      }
+      .container {
+        margin: 20px;
+        padding: 20px;
+      }
+      .header h1 {
+        font-size: 2rem;
+      }
+      .header p {
+        font-size: 1.2rem;
+      }
+      .paragraph {
+        margin-bottom: 20px;
+      }
+    }
+
+    /* Music control button */
+    .music-control-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #B788C7; /* Button background from new palette */
+      color: #6B4F8E; /* Button text color */
+      padding: 10px 15px;
+      border-radius: 10px;
+      border: 1px solid #9674A5; /* Slightly darker border for button */
+      cursor: pointer;
+      font-size: 0.9rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.2s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .music-control-button:hover {
+      background-color: #C2A5D4; /* Button hover background from new palette */
+      color: #6B4FCF; /* Button hover text color (kept same for contrast) */
+      transform: translateY(-2px);
+    }
+
+    .music-control-button .icon {
+      margin-right: 8px;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <h1>敬爱的侯教官、郭教官：</h1>
+    <p>您好：</p>
+  </header>
+  <section class="content" id="letterContent">
+    <p class="paragraph" style="animation-delay: 0.6s;">
+      写下这封信的时候，军训已经进入尾声，短短十余天的时间，却让我有很多话想说。或许等到真正说再见的那一刻，这段时光才会在记忆里沉淀出更深的颜色，但此刻，我想在记忆还滚烫的时候，留下一点温度，写给你们，也写给这段成长的日子。
+    </p>
+    <p class="paragraph" style="animation-delay: 1.2s;">
+      7月2日，正式开训。那天阴天，凉风习习，开幕式并不难熬，真正的挑战，是回到营地之后的第一项——军姿。仅仅五分钟，却有四人晕倒，还叫来了救护车。说实话，那一刻的我，是茫然的，是排斥的。不理解、不适应、甚至有些逃避。扁平的鞋底、浸湿的背夹、无法动弹的站姿，每一项都让人忍不住抱怨。但训练才刚开始。
+    </p>
+    <p class="paragraph" style="animation-delay: 1.8s;">
+      接下来的两三天里，我们练习稍息、立正、停止间转法、蹲下起立、敬礼、齐步走……动作逐渐复杂，身体也开始隐隐作痛，畏难情绪越发明显。但奇妙的是，倒下的同学越来越少，身边的伙伴在抱怨中坚持，我也在“坚持中学着坚持”。那是我第一次意识到，原来军训不是一场意志的考验，而是一场“跟自己过不去”的修行。
+    </p>
+    <p class="paragraph" style="animation-delay: 2.4s;">
+      从第五天开始，艰难的正步训练来了。如果说齐步走是手酸，那么正步就是全身痛。每天训练完回寝，都是拖着酸胀的双腿、挺着发痛的背和牵扯着的肩窝一步步上楼。但我印象最深的，不是疼，而是某天晚上刷到的阅兵视频。那一排排、一列列如机器般整齐划一的方阵，那些曾被外国人质疑为AI合成的画面，那是无数军人日复一日、年复一年练出来的。而我，只不过站在树荫底下、挥着臂抬着腿，练上不到十天。我忽然觉得，抱怨有点可笑。这可能是我人生中最后一次系统接受“军人式训练”，不说热爱，至少不该荒废。
+    </p>
+    <p class="paragraph" style="animation-delay: 3.0s;">
+      于是，我去搜正步的视频，尝试在每一个动作里寻找“稳定”的要领。你们的指导、我们反复的练习，日复一日的重复里，我真的看到自己的进步，也开始明白所谓“严格”背后的用意。
+    </p>
+    <p class="paragraph" style="animation-delay: 3.6s;">
+      7月9号是个特别的日子。上午的打靶，我左眼闭不上右眼睁不开，才知道那种“十环”的稳定需要多难的控制。而作为队长，定向越野让我切真体会到一个好的团队离不开有效的沟通协作，每个人各尽其力，才能收获出色的成果。真心特别感谢团队中的每一个人！晚上的军歌合唱，那首《团结就是力量》我们连唱得铿锵有力。每个连队都那么出色，也许多年后，我们都会怀念那晚，为着集体的荣耀而发声的时刻。
+    </p>
+    <p class="paragraph" style="animation-delay: 4.2s;">
+      从Day10开始，步伐训练轻松了不少，我们也渐渐意识到：军训的日子已经所剩无几。最初觉得一分一秒都难熬的时间，转眼就过去了。我们曾在烈日下喊“太晒了”，也曾在雨云飘来时偷偷欣喜，但现在，我却忽然舍不得。你们在我们动作不整时的严厉纠正，在我们进步时那微微扬起的嘴角，成了我们记忆中闪光的片段。我们不只是训练了一套动作、一种队形，更是在这段时光中，学会了坚持，学会了理解和尊重。
+    </p>
+    <p class="paragraph" style="animation-delay: 4.8s;">
+      而最让我们自豪的是，在你们的带领下，我们连队一举拿下“先进连队”“内务卫生优秀连队”“军歌铿锵连队”三项荣誉。那不仅是奖项，更是我们共同经历的见证，是你们悉心教导与严格要求下结出的果实。
+    </p>
+    <p class="paragraph" style="animation-delay: 5.4s;">
+      此刻回望，我们曾抱怨太阳太毒、训练太累，也曾在烈日与汗水中反复挣扎。但如今，当结束近在眼前，心里却悄然涌上一丝不舍。我们开始怀念你们口令里铿锵有力的语调，怀念操场边你们目光坚定的注视，也怀念每一次动作完成后，你们默默露出的那一丝笑意。
+      原来，最难忘的不是烈日下的军姿，也不是正步时的酸痛，而是那些与我们并肩的日子——你们的陪伴、教导与守望，像一束光，在这段短暂却珍贵的时光中，为我们照亮了成长的方向。
+    </p>
+    <p class="paragraph" style="animation-delay: 6.0s;">
+      你们并不比我们年长多少，却早已在钢铁般的军纪与责任中，练就了令人敬佩的坚毅与担当。作为通信兵，你们平日里或许是无声的信息守护者，但在这段短暂的相处中，你们的言传身教、你们的目光与微笑，却成了我们记忆中最清晰、最温暖的“信号”。
+      我们喜欢你们，不仅因为你们的专业与严格，更因为那份隐藏在利落口令背后的温柔与关怀。你们一次次为我们示范动作；陪我们走在烈日与星光之间，走过一段不算轻松却注定难忘的青春路。
+    </p>
+    <p class="paragraph" style="animation-delay: 6.6s;">
+      谢谢你们，谢谢在这个夏天里，你们用实际行动告诉我们，什么是军人的标准，什么是坚持的力量。你们的身影，将会成为我们青春画卷中，闪着光的注脚。
+      愿你们前路顺遂，肩上星徽更耀眼；愿你们的每一次奔赴都不负热爱，每一次坚守都被深深铭记。也愿你们如通天的电波一般，始终保持坚定的方向与炽热的频率，在属于你们的天地中，发光发亮。
+    </p>
+    <p class="paragraph" style="animation-delay: 7.2s;">
+      若有幸，愿将来某日，再以更成熟的模样，与教官们重逢，分享成长的故事，也重温这段流光溢彩的岁月。
+    </p>
+    <p class="paragraph" style="animation-delay: 7.8s;">
+      山海有信，岁月有光。
+      感恩相遇，敬礼以谢！
+    </p>
+  </section>
+
+  <footer class="signature">
+    <p class="name">十二连 黄湘淇 敬上</p>
+    <p class="date">2025年7月</p>
+  </footer>
+</div>
+
+<audio id="backgroundMusic" loop autoplay>
+  <source src="Ending.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicToggleButton" class="music-control-button">
+  <span class="icon">♪</span>
+  <span id="musicStatusText">暂停音乐</span>
+</button>
+
+<script>
+  const audio = document.getElementById('backgroundMusic');
+  const musicToggleButton = document.getElementById('musicToggleButton');
+  const musicStatusText = document.getElementById('musicStatusText');
+  let isPlaying = true; // Initial state set to true, as we attempt autoplay
+
+  // Set volume to maximum (1.0)
+  audio.volume = 1.0;
+
+  // Attempt to play audio immediately
+  // This is wrapped in a 'DOMContentLoaded' event listener to ensure the DOM is loaded before execution.
+  // However, most browsers will still prevent autoplay without user interaction.
+  document.addEventListener('DOMContentLoaded', () => {
+    audio.play()
+            .then(() => {
+              // Autoplay successful
+              musicStatusText.textContent = '暂停音乐';
+              isPlaying = true;
+            })
+            .catch(error => {
+              // Autoplay failed, likely due to browser policies
+              console.warn('Autoplay music failed, user interaction required:', error);
+              musicStatusText.textContent = '播放音乐'; // If autoplay fails, reset text to 'Play Music'
+              isPlaying = false;
+            });
+  });
+
+  musicToggleButton.addEventListener('click', () => {
+    if (isPlaying) {
+      audio.pause();
+      musicStatusText.textContent = '播放音乐';
+      isPlaying = false;
+    } else {
+      audio.play()
+              .then(() => {
+                musicStatusText.textContent = '暂停音乐';
+                isPlaying = true;
+              })
+              .catch(error => {
+                console.error('Music playback failed:', error);
+                musicStatusText.textContent = '播放失败 (点击以重试)';
+              });
+    }
+  });
+
+  // This listener handles cases where audio stops for other reasons, ensuring it tries to loop if it was playing.
+  audio.addEventListener('ended', () => {
+    // If audio ends and it was in a playing state, try to replay
+    if (isPlaying) {
+      audio.currentTime = 0; // Reset to beginning
+      audio.play();
+    }
+  });
+
+  // Apply animation delays to each paragraph
+  document.querySelectorAll('.paragraph').forEach((p, index) => {
+    p.style.animationDelay = `${0.5 + index * 0.5}s`;
+  });
+</script>
+</body>
+</html>
